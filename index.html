@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Pomodoro Timer, pomodoro timer, pomodoro">
+    <meta name="description" content="The Pomodoro Technique is a time management system that encourages people to work with the time they
+    have—rather than against it. Using this method, you break your workday into 25-minute chunks separated by five-minute breaks. 
+    These intervals are referred to as pomodoros.">
+
+    <link rel="shortcut icon" href="./favicon.gif" type="image/gif">
+
+    <title>Pomodoro Timer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Box Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div class="container text-center mb-5">
+        <h1 class="my-3">PO<span class="text-primary">MO</span><span class="text-warning">DO</span><span
+                class="text-danger">RO</span> <i class='bx bxs-timer bx-tada'>Timer</i></h1>
+        <p>The Pomodoro Technique is a time management system that encourages people to work with the time they
+            have—rather
+            than against it. Using this method, you break your workday into 25-minute chunks separated by five-minute
+            breaks. These intervals are referred to as pomodoros.</p>
+    </div>
+
+    <div class="row">
+        <div class="clock mb-5">
+            <div class="mins">0</div>
+            <div>:</div>
+            <div class="secs">00</div>
+            <audio src="https://soundbible.com/mp3/service-bell_daniel_simion.mp3"></audio>
+            <svg class="progress-ring" height="120" width="120">
+                <circle class="progress-ring_circle" stroke-width="8" fill="transparent" r="50" cx="60" cy="60" />
+            </svg>
+        </div>
+
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <div class="btn-group gap-2" role="group">
+                    <button class="start btn btn-success">Start Focus</button>
+                    <button class="reset btn btn-secondary">Reset</button>
+                    <button class="pause btn btn-danger">Pause</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <form action=".">
+                <label for="focusTime" class="form-label">Focus Time</label>
+                <input class="mb-2" type="number" value="1" id="focusTime">
+                <label for="breakTime" class="form-label">Break Time</label>
+                <input class="mb-2" type="number" value="1" id="breakTime">
+                <button type="submit" class="btn btn-outline-primary">Save Settings</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./JS/progress.js"></script>
+    <script src="./JS/settings.js"></script>
+    <script src="./JS/timer.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
